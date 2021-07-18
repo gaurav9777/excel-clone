@@ -1,0 +1,318 @@
+body{
+    margin: 0; /* remove margin from container root (yellow colour --> inspect element ) */
+    overflow: hidden; /* remove scorllable property */
+    font-size: 40;
+}
+
+*{
+    box-sizing: border-box; /* include border and padding */
+}
+/* 
+root == container
+child == title-barbar , menu-bar , menu-icon-bar , formula-bar , data-container-bar , sheet-bar1
+*/
+.container{
+    height: 100vh;
+   
+}
+
+.title-bar{
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.menu-bar{
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+
+}
+
+.menu-item{
+    padding-left: 10px;
+    padding-right: 10px;
+    color:#ffff;
+    display: flex;
+    align-items: center;
+}
+
+/* initialy Home item is selected */
+
+.menu-item.selected{
+    background-color:#ffff;
+    color: #107c41;
+}
+
+.menu-item:hover{
+    background-color: #02421f;
+    cursor: pointer;
+}
+
+.menu-item.selected:hover{
+    background-color: rgb(243, 240, 240);
+    color: #107c41;
+    cursor: default;
+}
+
+.menu-icon-bar{
+    height: 6vh;
+    background-color: rgb(237, 243, 243);
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu-icon{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu-icon:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.font-family-selector{
+    height: 30px;
+    font-size: 18px;
+    width: 150px;
+}
+
+.selector{
+    height: 30px;
+    font-size: 18px;
+}
+
+.selector option{
+    font-size: 16px;
+}
+
+.formula-bar{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: rgb(241, 241, 242);
+}
+
+.data-container{
+   height: 75vh;
+   display: flex;
+   flex-wrap: wrap;
+   
+}   
+
+.select-all{
+    width: 30px;
+    height: 30px;
+    border: 1px solid lightgray;
+}
+
+.column-name-container{
+    width: calc(100vw - 30px);
+    height: 30px;
+    border: 1px solid lightgray;
+    display: flex;
+    overflow: hidden;
+}
+
+.row-name-container{
+    width: 30px;
+    height: calc(75vh - 30px);
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+
+.input-cell-container{
+    width: calc(100vw - 30px);
+    height: calc(75vh - 30px);
+    border: 1px solid lightgray;
+    overflow: scroll;
+}
+
+.sheet-bar{
+    height: 4vh;
+    display: flex;  
+    align-items: center;  
+}
+
+.icon-left-scroll, .icon-right-scroll{
+font-size: 26px;
+
+}
+
+.icon-left-scroll:hover, .icon-right-scroll:hover{
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.scroller{
+    width: 70px;
+}
+
+.icon-add{
+    color: #107c41;
+    width: 40px;
+}
+
+.icon-add:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.sheet-tab-container{
+    width: calc(100vw - 110px);
+    
+}
+
+.sheet-tab{
+    border-bottom: 4px solid #107c41;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 70px;
+    display: flex;
+    text-align: center;
+    font-weight: 600;
+    border-right: 1px solid lightgray;
+}
+
+.sheet-tab:hover{
+    cursor:default;
+}
+
+.column-name{
+    min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid lightgray;
+    font-weight: 600;
+}
+.row-name{
+    display: flex;
+    justify-content: center;
+    min-height: 25px;
+    border-bottom: 1px solid lightgray;
+}
+.cell-row{
+    display: flex;
+}
+.input-cell{
+    min-width: 100px;
+    min-height: 25px;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    outline-color: #107c41;
+
+}
+.input-cell.selected{
+    border:2px solid #107c41;
+}
+.formula-editor{
+    height: 70%;
+    border: 1px solid lightgray;
+    background-color: #ffff;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    
+    align-items: center;
+
+}
+.selected-cell{
+    width: 120px;
+}
+.function-sign{
+    width: 40px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.formula-input{
+    width: calc(100vw - 160px);
+    border: 2px solid #107c41;
+    
+}
+
+.menu-icon.selected{
+    background-color: lightgray;
+}
+
+.input.top-cell-selected{
+    border-top: none;
+}
+.input.bottom-cell-selected{
+    border-bottom: 1px solid lightgrey;
+}
+
+.input.right-cell-selected{
+    border-right: 1px solid lightgray;
+}
+.input.left-cell-selected{
+    border-left: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+CSS SELECTERS
+with (.) --> class 
+with (#) --> id 
+with (tag) --> tagname 
+with (attribute) --> [attribute-name]
+
+1.ex:
+.abc#def
+(class that's name is abc and has ID def)
+
+2.ex:
+a[href="www.google.com"]
+(such anchor tag which have attribute href and have value equals to www.google.com)
+
+3.ex:
+.a.b
+(such tag which has class b and a is parent of class b)
+*/
